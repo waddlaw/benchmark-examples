@@ -1,0 +1,26 @@
+name:                mapp
+version:             0.1.0.0
+github:              "waddlaw/mapp"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/waddlaw/mapp#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+benchmarks:
+  gauge:
+    main: bench/Gauge.hs
+    dependencies:
+      - gauge
+      - mapp
+  criterion:
+    main: bench/Criterion.hs
+    dependencies:
+      - criterion
+      - mapp
